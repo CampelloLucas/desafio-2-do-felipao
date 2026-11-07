@@ -1,4 +1,4 @@
-// Função que calcula o saldo de vitórias e determina o nível do Herói
+// calculo do saldo de vitórias e determina o nível do Herói
 function calcularRankeadas(vitorias, derrotas) {
     let saldoVitorias = vitorias - derrotas;
     let nivel = "";
@@ -23,11 +23,11 @@ function calcularRankeadas(vitorias, derrotas) {
     return { saldoVitorias, nivel };
 }
 
-// Dados do nosso Herói
+// Meu Herói
 let nomeHeroi = "Charizard";
 
-// Simulando um histórico de partidas usando um array e um laço de repetição (for)
-// Aqui somamos as vitórias e as derrotas acumuladas para atingir o total desejado
+// histórico de partidas
+// vitórias e as derrotas acumuladas para atingir o total desejado
 let partidasJogadas = [
     { vitoriasParciais: 45, derrotasParciais: 2 },
     { vitoriasParciais: 40, derrotasParciais: 2 }
@@ -41,8 +41,8 @@ for (let i = 0; i < partidasJogadas.length; i++) {
     totalDerrotas += partidasJogadas[i].derrotasParciais;
 }
 
-// Chamando a função com o total correto (85 vitórias e 4 derrotas)
+// função com o total
 let resultado = calcularRankeadas(totalVitorias, totalDerrotas);
 
-// Exibindo a mensagem final solicitada no desafio
+//  mensagem final do desafio
 console.log(`O Herói ${nomeHeroi} tem de saldo de **${resultado.saldoVitorias}** está no nível de **${resultado.nivel}**`);
